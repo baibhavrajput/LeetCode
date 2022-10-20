@@ -41,8 +41,8 @@ class Solution {
         int tempRow = row;
         int tempCol = col;
         
-        while(row >= 0 && col >= 0){
-            
+        while(row >= 0 && col >= 0)
+        {    
             if(board[row][col] == 'Q')
                 return false;
             
@@ -53,8 +53,8 @@ class Solution {
         row = tempRow;
         col = tempCol;
         
-        while(row >= 0){
-            
+        while(row >= 0)
+        {    
             if(board[row][col] == 'Q')
                 return false;
             
@@ -64,8 +64,8 @@ class Solution {
         row = tempRow;
         col = tempCol;
         
-        while(row >= 0 && col < n){
-            
+        while(row >= 0 && col < n)
+        {    
             if(board[row][col] == 'Q')
                 return false;
             
@@ -74,5 +74,4 @@ class Solution {
         }
         return true;
     }
-    
 }
