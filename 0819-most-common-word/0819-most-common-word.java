@@ -7,9 +7,6 @@ class Solution {
         
         int n = arr.length;
         
-        for(int i=0 ; i<n ; i++)
-            System.out.println(arr[i]);
-        
         HashMap<String , Integer> map = new HashMap<>();
         
         for(int i=0 ; i<n ; i++){
@@ -18,8 +15,6 @@ class Solution {
             }
         }
         
-//         for(String s : map.getKey())
-//             System.out.print(s + " ");
         
         String ans = null;
         int maxi = 0;
@@ -32,13 +27,6 @@ class Solution {
             }
         }
         
-        // for(Map.Entry<String,Integer> e : map.entrySet()){
-        //     System.out.println(e.getKey());
-        //     if(e.getValue() > maxi){
-        //         maxi = e.getValue();
-        //         ans = e.getKey();
-        //     }
-        // }
         return ans;
     }
 }
