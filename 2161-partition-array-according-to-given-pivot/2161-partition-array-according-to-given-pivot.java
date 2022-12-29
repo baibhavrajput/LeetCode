@@ -3,33 +3,29 @@ class Solution {
         
         int n = nums.length;
         int [] res = new int[n];
-        int ind = 0;
+        int i = 0;
+        int j = n-1;
+        int lessThanInd = 0;
+        int greaterThanInd = n-1;
         
-        for(int i=0 ; i<n ; i++){
+        while(i < n && j >= 0){
             
-            if(nums[i] < pivot)
-            {
-                res[ind] = nums[i];
-                ind++;
+            if(nums[i] < pivot){
+                res[lessThanInd] = nums[i];
+                lessThanInd++;
             }
+            
+            if(nums[j] > pivot){
+                res[greaterThanInd] = nums[j];
+                greaterThanInd--;
+            } 
+            
+            i++;
+            j--;
         }
         
-        for(int i=0 ; i<n ; i++){
-            
-            if(nums[i] == pivot)
-            {
-                res[ind] = nums[i];
-                ind++;
-            }
-        }
-        
-        for(int i=0 ; i<n ; i++){
-            
-            if(nums[i] > pivot)
-            {
-                res[ind] = nums[i];
-                ind++;
-            }
+        for( i=lessThanInd ; i<=greaterThanInd ; i++){
+            res[i] = pivot;
         }
         
         return res;
