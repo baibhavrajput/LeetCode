@@ -31,10 +31,10 @@ public class GFG {
 //User function Template for Java
 
 class Solution {
-    int remove_duplicate(int arr[],int n){
-        // code here 1 2 2 3 3 3  
-        int[] res = new int[n];
-        res[0] = arr[0];
+    int remove_duplicate(int arr[], int n){
+        // code here 1 2 2 3 3 3  // 1 2 3
+        // int[] res = new int[n];
+        // res[0] = arr[0];
         
         int ind = 1;
         
@@ -45,14 +45,14 @@ class Solution {
                 
             else if(arr[i-1] != arr[i])
             {
-                res[ind] = arr[i];
+                arr[ind] = arr[i];
                 ind++;
             }
         }
         
-        for(int i=0 ; i<ind ; i++){
-            arr[i] = res[i];
-        }
+        // for(int i=0 ; i<ind ; i++)
+        //     arr[i] = res[i];
+            
         return ind;
     }
 }
